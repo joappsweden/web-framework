@@ -60,7 +60,7 @@ class InputView extends View
   {
     switch ($this->type) {
       case 'text':
-        $view = View::setTag('textarea')
+        $view = self::setTag('textarea')
         ->setAttribute('class', 'input')
         ->setAttribute('name', $this->name)
         ->setAttribute('id', $this->id)
@@ -75,7 +75,7 @@ class InputView extends View
         break;
 
       case 'password':
-        $view = View::setTag('input')
+        $view = self::setTag('input')
         ->setAttribute('class', 'input')
         ->setAttribute('type', 'password')
         ->setAttribute('name', $this->name)
@@ -90,7 +90,7 @@ class InputView extends View
         return (string) $view;
 
       case 'file':
-        $view = View::setTag('input')
+        $view = self::setTag('input')
         ->setAttribute('class', 'input')
         ->setAttribute('type', 'file')
         ->setAttribute('name', $this->name)
@@ -105,7 +105,7 @@ class InputView extends View
         return (string) $view;
 
       case 'checkbox':
-        $view = View::setTag('input')
+        $view = self::setTag('input')
         ->setAttribute('class', 'input')
         ->setAttribute('type', 'checkbox')
         ->setAttribute('name', $this->name)
@@ -120,7 +120,7 @@ class InputView extends View
         return (string) $view;
 
       default:
-        $view = View::setTag('input')
+        $view = self::setTag('input')
         ->setAttribute('class', 'input')
         ->setAttribute('type', 'text')
         ->setAttribute('name', $this->name)
