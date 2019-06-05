@@ -50,6 +50,11 @@ Main::setTitle('Hello')
             ->setFont('body')
             ->setHorizontalPadding()
             ->setBottomPadding(1);
+
+      echo AnchorView::setText('Read more')
+            ->setHref('#')
+            ->setPadding()
+            ->setBottomPadding(1);
     }
 
 })->render();

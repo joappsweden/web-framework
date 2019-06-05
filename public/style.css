@@ -39,6 +39,12 @@
   padding: .5rem;
 }
 
+/* ANCHOR VIEW */
+
+.anchor {
+  display: inline-block;
+}
+
 /* MARGIN */
 
 .margin {
