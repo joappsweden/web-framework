@@ -29,8 +29,9 @@ class ImageView extends View
     $src = $this->src;
     $alt = $this->alt;
     $classString = $this->getClasses();
+    $attribute = $this->getAttributes();
 
-    $this->html = "<img class='image$classString' src='./public/images/$src' alt='$alt'>";
+    $this->html = "<img class='image$classString' src='./public/images/$src' alt='$alt'$attribute>";
 
     return (string) $this->html;
   }

@@ -29,6 +29,7 @@ class ButtonView extends View
     $event = "";
     $text = $this->text;
     $classString = $this->getClasses();
+    $attribute = $this->getAttributes();
 
     if (count($this->event) > 0) {
       foreach ($this->event as $key => $value) {
@@ -38,7 +39,7 @@ class ButtonView extends View
       $event = ' ' . trim($event, ' ');
     }
 
-    $this->html = "<button class='button$classString'$event>$text</button>";
+    $this->html = "<button class='button$classString'$event $attribute>$text</button>";
 
     return (string) $this->html;
   }

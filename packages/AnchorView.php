@@ -29,8 +29,9 @@ class AnchorView extends View
     $href = $this->href;
     $text = $this->text;
     $classString = $this->getClasses();
+    $attribute = $this->getAttributes();
 
-    $this->html = "<a class='anchor$classString' href='$href'>$text</a>";
+    $this->html = "<a class='anchor$classString' href='$href'$attribute>$text</a>";
 
     return (string) $this->html;
   }

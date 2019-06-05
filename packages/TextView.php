@@ -46,6 +46,10 @@ class TextView extends View
         $this->html = "<p class='text body$classString'>$text</p>";
         break;
 
+      case 'label':
+        $this->html = "<label class='text label$classString'>$text</label>";
+        break;
+
       default:
         $this->html = "<p class='text body$classString'>$text</p>";
         break;

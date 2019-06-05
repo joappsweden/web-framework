@@ -6,6 +6,7 @@
 class View
 {
   protected $html;
+  protected $attribute = [];
   protected $classes = [];
 
   function __construct()
@@ -89,6 +90,27 @@ class View
       }
 
       return ' ' . trim($classString, ' ');
+    }
+
+    return '';
+  }
+
+  public function setAttribute($key, $value)
+  {
+    $this->attribute[$key] = $value;
+    return $this;
+  }
+
+  protected function getAttributes()
+  {
+    if (count($this->attribute) > 0) {
+      $attribute = "";
+      
+      foreach ($this->attribute as $key => $value) {
+        $attribute .= "$key = '$value' ";
+      }
+
+      return ' ' . trim($attribute, ' ');
     }
 
     return '';

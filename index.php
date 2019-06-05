@@ -10,6 +10,12 @@ Main::setTitle('Hello')
           ->setHorizontalPadding()
           ->setBottomPadding(1);
 
+    echo TextView::setText('Subscribe')
+          ->setFont('label');
+
+    echo InputView::setPlaceholder('your@domain.com')
+          ->setMargin();
+
     echo TextView::setText('Hello')
           ->setFont('subtitle')
           ->setHorizontalPadding()
