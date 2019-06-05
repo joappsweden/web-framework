@@ -41,6 +41,12 @@
   font-weight: bold;
 }
 
+.brand {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: .5rem;
+}
+
 /* IMAGE VIEW */
 
 .image {
@@ -76,29 +82,39 @@
   padding: .5rem;
 }
 
-.padding_one {
+.padding-one {
   padding: 1rem;
 }
 
-.horizontal_padding {
+.horizontal-padding {
   padding-left: .5rem;
   padding-right: .5rem;
 }
 
-.vertical_padding {
+.vertical-padding {
   padding-left: .5rem;
   padding-right: .5rem;
 }
 
-.top_padding {
+.top-padding {
   padding-left: .5rem;
   padding-right: .5rem;
 }
 
-.bottom_padding {
+.bottom-padding {
   padding-bottom: .5rem;
 }
 
-.bottom_padding_one {
+.bottom-padding-one {
   padding-bottom: 1rem;
+}
+
+/* BACKGROUND */
+
+.background-dark {
+  background-color: black;
+}
+
+.background-dark .text {
+  color: white;
 }

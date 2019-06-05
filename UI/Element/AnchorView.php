@@ -29,6 +29,7 @@ class AnchorView extends View
   public function __toString()
   {
     $view = self::setTag('a')
+    ->setAttribute('class', 'text')
     ->setAttribute('class', 'anchor')
     ->setAttribute('href', $this->reference)
     ->setContent($this->text);

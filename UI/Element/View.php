@@ -103,7 +103,13 @@ class View
 
   public function setPaddingOne()
   {
-    $this->setAttribute('class', 'padding_one');
+    $this->setAttribute('class', 'padding-one');
+    return $this;
+  }
+
+  public function setBackgroundDark()
+  {
+    $this->setAttribute('class', 'background-dark');
     return $this;
   }
 }

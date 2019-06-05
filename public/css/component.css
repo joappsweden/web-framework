@@ -1,0 +1,29 @@
+.navigation {
+  overflow: auto;
+}
+
+.navigation-title {
+  float: left;
+  width: 16.6%;
+}
+
+.navigation-item {
+  float: left;
+  width: 16.6%;
+}
+
+.navigation-item .anchor {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .navigation-title {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .navigation-item {
+    padding: 1rem;
+    width: 100%;
+  }
+}

@@ -3,14 +3,22 @@
 
 include_once 'init.php';
 
-echo UI\Element\MainView::setTitle('Hello world!')
+$nav = UI\Component\NavigationComponent::setName('Johann Malm')
+->setItem('#', 'Link')
+->setItem('#', 'Link')
+->setItem('#', 'Link')
+->setItem('#', 'Link')
+->setItem('#', 'Link');
+
+echo UI\Element\MainView::setTitle('Johann Malm')
 ->setAuthor('Johann Malm')
 ->setDescription('A new website')
 ->setKeywords('hello, world, website')
 
-->setStyle('style')
+->setStyle('main')
+->setStyle('component')
 ->setScript('app')
 
-->setContent('hello world');
+->setContent($nav);
 
 ?>

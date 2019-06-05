@@ -56,6 +56,12 @@ class TextView extends View
     return $this;
   }
 
+  public function setFontToBrand()
+  {
+    $this->font = 'brand';
+    return $this;
+  }
+
   public function __toString()
   {
     switch ($this->font) {
@@ -128,6 +134,19 @@ class TextView extends View
         $view = self::setTag('label')
         ->setAttribute('class', 'text')
         ->setAttribute('class', 'label')
+        ->setContent($this->text);
+        foreach ($this->getAttribute() as $key => $value) {
+          foreach ($value as $attribute) {
+            $view->setAttribute($key, $attribute);
+          }
+        }
+        return (string) $view;
+        break;
+
+      case 'brand':
+        $view = self::setTag('h1')
+        ->setAttribute('class', 'text')
+        ->setAttribute('class', 'brand')
         ->setContent($this->text);
         foreach ($this->getAttribute() as $key => $value) {
           foreach ($value as $attribute) {
