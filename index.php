@@ -3,7 +3,7 @@
 
 include_once 'init.php';
 
-echo MainView::setTitle('Hello world!')
+echo UI\Element\MainView::setTitle('Hello world!')
 ->setAuthor('Johann Malm')
 ->setDescription('A new website')
 ->setKeywords('hello, world, website')
@@ -12,16 +12,5 @@ echo MainView::setTitle('Hello world!')
 ->setScript('app')
 
 ->setContent('hello world');
-
-/*
-$paragraph = View::setTag('p')
-->setAttribute('class', 'text')
-->setAttribute('class', 'body')
-->setContent('Hello, world!');
-
-echo View::setTag('div')
-->setAttribute('class', 'section')
-->setContent($paragraph);
-*/
 
 ?>

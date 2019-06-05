@@ -1,12 +1,13 @@
 <?php
 
+namespace UI\Element;
+
 /**
- * AnchorView
+ * ButtonView
  */
-class AnchorView extends View
+class ButtonView extends View
 {
   private $text;
-  private $reference;
 
   function __construct($text)
   {
@@ -18,17 +19,10 @@ class AnchorView extends View
     return new self($text);
   }
 
-  public function setReference($reference)
-  {
-    $this->reference = $reference;
-    return $this;
-  }
-
   public function __toString()
   {
-    $view = self::setTag('a')
-    ->setAttribute('class', 'anchor')
-    ->setAttribute('href', $this->reference)
+    $view = self::setTag('button')
+    ->setAttribute('class', 'button')
     ->setContent($this->text);
 
     foreach ($this->getAttribute() as $key => $value) {
