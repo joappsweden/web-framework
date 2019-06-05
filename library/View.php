@@ -87,6 +87,12 @@ class View
     return $this;
   }
 
+  public function setMargin()
+  {
+    $this->setAttribute('class', 'margin');
+    return $this;
+  }
+
   public function setPadding()
   {
     $this->setAttribute('class', 'padding');
