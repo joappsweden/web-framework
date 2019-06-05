@@ -33,7 +33,20 @@
   width: 100%;
 }
 
+/* BUTTON VIEW */
+
+.button {
+  padding: .5rem;
+}
+
+/* MARGIN */
+
+.margin {
+  margin: .5rem;
+}
+
 /* PADDING */
+
 .padding {
   padding: .5rem;
 }

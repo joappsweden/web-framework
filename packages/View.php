@@ -13,6 +13,17 @@ class View
 
   }
 
+  public function setMargin($size=0)
+  {
+    if ($size === 0) {
+      $this->classes[] = 'margin';
+    } else {
+      $this->classes[] = 'margin_'.$size;
+    }
+
+    return $this;
+  }
+
   public function setPadding($size=0)
   {
     if ($size === 0) {
