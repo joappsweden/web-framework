@@ -3,10 +3,6 @@
 
 include_once 'init.php';
 
-$button = View::setTag('button')
-->setAttribute('onclick', 'hello()')
-->setContent('Click to be greeted!');
-
 echo MainView::setTitle('Hello world!')
 ->setAuthor('Johann Malm')
 ->setDescription('A new website')
@@ -14,7 +10,8 @@ echo MainView::setTitle('Hello world!')
 ->setStyle('style')
 ->setScript('app')
 ->setContent('Hello, world!!!')
-->setContent($button);
+->setContent(SectionView::setId('test')->setContent('Section'))
+->setContent(SectionView::setId('test')->setContent('Section'));
 
 /*
 $paragraph = View::setTag('p')
