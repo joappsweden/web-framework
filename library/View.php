@@ -31,6 +31,11 @@ class View
     return $this;
   }
 
+  public function getAttribute()
+  {
+    return $this->attribute;
+  }
+
   public function getContent()
   {
     return $this->content;
@@ -74,6 +79,12 @@ class View
     }
 
     return '';
+  }
+
+  public function setTextAlignmentToCenter()
+  {
+    $this->setAttribute('class', 'text-center');
+    return $this;
   }
 }
 

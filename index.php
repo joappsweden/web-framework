@@ -9,9 +9,10 @@ echo MainView::setTitle('Hello world!')
 ->setKeywords('hello, world, website')
 ->setStyle('style')
 ->setScript('app')
-->setContent('Hello, world!!!')
-->setContent(SectionView::setId('test')->setContent('Section'))
-->setContent(SectionView::setId('test')->setContent('Section'));
+->setContent(SectionView::setId('test')
+  ->setTextAlignmentToCenter()
+  ->setContent(TextView::setText('Hello, world!')->setFontToHeadline())
+  ->setContent(TextView::setText('Another cool application.')))
 
 /*
 $paragraph = View::setTag('p')

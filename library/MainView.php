@@ -58,39 +58,39 @@ class MainView extends View
     $head = "";
     $body = "";
 
-    $head .= View::setTag('meta')
+    $head .= self::setTag('meta')
     ->setAttribute("name", "viewport")
     ->setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
 
-    $head .= View::setTag('meta')
+    $head .= self::setTag('meta')
     ->setAttribute("charset", "utf-8");
 
     if (isset($this->title)) {
-      $head .= View::setTag('title')
+      $head .= self::setTag('title')
       ->setContent($this->title);
     }
 
     if (isset($this->author)) {
-      $head .= View::setTag('meta')
+      $head .= self::setTag('meta')
       ->setAttribute("name", "author")
       ->setAttribute("content", $this->author);
     }
 
     if (isset($this->description)) {
-      $head .= View::setTag('meta')
+      $head .= self::setTag('meta')
       ->setAttribute("name", "description")
       ->setAttribute("content", $this->description);
     }
 
     if (isset($this->keywords)) {
-      $head .= View::setTag('meta')
+      $head .= self::setTag('meta')
       ->setAttribute("name", "keywords")
       ->setAttribute("content", $this->keywords);
     }
 
     if (isset($this->style) && count($this->style) > 0) {
       foreach ($this->style as $style) {
-        $head .= View::setTag('link')
+        $head .= self::setTag('link')
         ->setAttribute("type", "text/css")
         ->setAttribute("rel", "stylesheet")
         ->setAttribute("href", "./public/css/".$style.".css");
@@ -103,17 +103,17 @@ class MainView extends View
 
     if (isset($this->script) && count($this->script) > 0) {
       foreach ($this->script as $script) {
-        $body .= View::setTag('script')
+        $body .= self::setTag('script')
         ->setAttribute("type", "text/javascript")
         ->setAttribute("src", "./public/js/".$script.".js")
         ->setContent("");
       }
     }
 
-    $html .= View::setTag('head')
+    $html .= self::setTag('head')
     ->setContent($head);
 
-    $html .= View::setTag('body')
+    $html .= self::setTag('body')
     ->setContent($body);
 
     return $html;

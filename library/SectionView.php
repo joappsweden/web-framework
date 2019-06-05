@@ -19,9 +19,15 @@ class SectionView extends View
 
   public function __toString()
   {
-    $html = View::setTag('div')
+    $html = self::setTag('div')
     ->setAttribute('class', 'section')
     ->setAttribute('id', $this->id);
+
+    foreach ($this->getAttribute() as $key => $value) {
+      foreach ($value as $attribute) {
+        $html->setAttribute($key, $attribute);
+      }
+    }
 
     foreach ($this->getContent() as $content) {
       $html->setContent($content);
