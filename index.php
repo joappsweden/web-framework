@@ -24,6 +24,8 @@ Main::setTitle('Hello')
           ->setHorizontalPadding()
           ->setBottomPadding(1);
 
+      echo ImageView::setSource('image.jpg');
+
       echo TextView::setText($text)
             ->setFont('body')
             ->setHorizontalPadding()

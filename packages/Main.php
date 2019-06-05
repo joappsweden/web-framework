@@ -33,7 +33,7 @@ class Main
     echo "<head>";
     echo "<meta charset='utf-8'>";
     echo "<title>$title</title>";
-    echo "<link rel='stylesheet' href='style.css'>";
+    echo "<link rel='stylesheet' href='./public/style.css'>";
     echo "</head>";
     echo "<body>";
 

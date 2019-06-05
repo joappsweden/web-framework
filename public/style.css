@@ -27,6 +27,12 @@
   line-height: 150%;
 }
 
+/* IMAGE VIEW */
+
+.image {
+  width: 100%;
+}
+
 /* PADDING */
 .padding {
   padding: .5rem;
