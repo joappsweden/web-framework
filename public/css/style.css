@@ -52,6 +52,9 @@
 .button {
   padding: .5rem;
   font-size: 1rem;
+  border-style: none;
+  background-color: black;
+  color: white;
 }
 
 /* ANCHOR VIEW */
