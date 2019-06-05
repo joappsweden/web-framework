@@ -62,6 +62,8 @@ class InputView extends View
       case 'text':
         $view = View::setTag('textarea')
         ->setAttribute('class', 'input')
+        ->setAttribute('name', $this->name)
+        ->setAttribute('id', $this->id)
         ->setAttribute('placeholder', $this->placeholder)
         ->setContent('');
         foreach ($this->getAttribute() as $key => $value) {
@@ -76,6 +78,8 @@ class InputView extends View
         $view = View::setTag('input')
         ->setAttribute('class', 'input')
         ->setAttribute('type', 'password')
+        ->setAttribute('name', $this->name)
+        ->setAttribute('id', $this->id)
         ->setAttribute('placeholder', $this->placeholder)
         ->setContent('');
         foreach ($this->getAttribute() as $key => $value) {
@@ -89,6 +93,8 @@ class InputView extends View
         $view = View::setTag('input')
         ->setAttribute('class', 'input')
         ->setAttribute('type', 'file')
+        ->setAttribute('name', $this->name)
+        ->setAttribute('id', $this->id)
         ->setAttribute('placeholder', $this->placeholder)
         ->setContent('');
         foreach ($this->getAttribute() as $key => $value) {
@@ -102,6 +108,8 @@ class InputView extends View
         $view = View::setTag('input')
         ->setAttribute('class', 'input')
         ->setAttribute('type', 'checkbox')
+        ->setAttribute('name', $this->name)
+        ->setAttribute('id', $this->id)
         ->setAttribute('placeholder', $this->placeholder)
         ->setContent('');
         foreach ($this->getAttribute() as $key => $value) {
@@ -115,6 +123,8 @@ class InputView extends View
         $view = View::setTag('input')
         ->setAttribute('class', 'input')
         ->setAttribute('type', 'text')
+        ->setAttribute('name', $this->name)
+        ->setAttribute('id', $this->id)
         ->setAttribute('placeholder', $this->placeholder)
         ->setContent('');
         foreach ($this->getAttribute() as $key => $value) {
