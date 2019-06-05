@@ -26,7 +26,22 @@ class Main
 
   public function render()
   {
+    $title = $this->title;
+
+    echo "<!DOCTYPE html>";
+    echo "<html>";
+    echo "<head>";
+    echo "<meta charset='utf-8'>";
+    echo "<title>$title</title>";
+    echo "<link rel='stylesheet' href='style.css'>";
+    echo "</head>";
+    echo "<body>";
+
     ($this->content)();
+
+    echo "</body>";
+    echo "</html>";
+
   }
 }
 
