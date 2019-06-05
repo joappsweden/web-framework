@@ -6,8 +6,8 @@
 class View
 {
   private $tag;
-  private $attribute;
-  private $content;
+  private $attribute = [];
+  private $content = [];
 
   function __construct($tag)
   {
@@ -31,38 +31,49 @@ class View
     return $this;
   }
 
+  public function getContent()
+  {
+    return $this->content;
+  }
+
   public function __toString()
   {
-    $tag = $this->tag;
-    $attribute = "";
+    if (isset($this->tag)) {
+      $tag = $this->tag;
+      $attribute = "";
 
-    if (count($this->attribute) > 0) {
-      foreach ($this->attribute as $key => $value) {
-        $dataString = "";
+      if (count($this->attribute) > 0) {
+        foreach ($this->attribute as $key => $value) {
+          $dataString = "";
 
-        foreach ($value as $data) {
-          $dataString .= $data . " ";
+          foreach ($value as $data) {
+            $dataString .= $data . " ";
+          }
+
+          $dataString = trim($dataString, " ");
+
+          $attribute .= "$key = '$dataString' ";
         }
 
-        $dataString = trim($dataString, " ");
-
-        $attribute .= "$key = '$dataString' ";
+        $attribute = " " . trim($attribute, " ");
       }
 
-      $attribute = " " . trim($attribute, " ");
+      $html = "";
+
+      $html .= "<".$tag.$attribute.">";
+
+      foreach ($this->content as $content) {
+        $html .= $content;
+      }
+
+      if (count($this->content) > 0) {
+        $html .= "</".$tag.">";
+      }
+
+      return (string) $html;
     }
 
-    $html = "";
-
-    $html .= "<".$tag.$attribute.">";
-
-    foreach ($this->content as $content) {
-      $html .= $content;
-    }
-
-    $html .= "</".$tag.">";
-
-    return (string) $html;
+    return '';
   }
 }
 
