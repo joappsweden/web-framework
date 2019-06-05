@@ -86,6 +86,18 @@ class View
     $this->setAttribute('class', 'text-center');
     return $this;
   }
+
+  public function setPadding()
+  {
+    $this->setAttribute('class', 'padding');
+    return $this;
+  }
+
+  public function setPaddingOne()
+  {
+    $this->setAttribute('class', 'padding_one');
+    return $this;
+  }
 }
 
 

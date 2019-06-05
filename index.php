@@ -7,12 +7,16 @@ echo MainView::setTitle('Hello world!')
 ->setAuthor('Johann Malm')
 ->setDescription('A new website')
 ->setKeywords('hello, world, website')
+
 ->setStyle('style')
 ->setScript('app')
+
 ->setContent(SectionView::setId('test')
   ->setTextAlignmentToCenter()
-  ->setContent(TextView::setText('Hello, world!')->setFontToHeadline())
-  ->setContent(TextView::setText('Another cool application.')))
+  ->setContent(TextView::setText('Hello, world!')->setFontToHeadline()->setPadding())
+  ->setContent(TextView::setText('Another cool application.')->setPadding())
+  ->setContent(ImageView::setSource('image.jpg')->setPaddingOne())
+  )
 
 /*
 $paragraph = View::setTag('p')

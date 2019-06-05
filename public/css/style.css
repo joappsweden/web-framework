@@ -71,6 +71,10 @@
   padding: .5rem;
 }
 
+.padding_one {
+  padding: 1rem;
+}
+
 .horizontal_padding {
   padding-left: .5rem;
   padding-right: .5rem;
@@ -90,6 +94,6 @@
   padding-bottom: .5rem;
 }
 
-.bottom_padding_1 {
+.bottom_padding_one {
   padding-bottom: 1rem;
 }
