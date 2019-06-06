@@ -43,8 +43,10 @@ class NavigationComponent
     ->setContent(View::setTag('div')
       ->setAttribute('class', 'navigation-title')
       ->setTextAlignmentToCenter()
-      ->setContent(TextView::setText($this->name)
-        ->setFontToBrand()
+      ->setContent(AnchorView::setText($this->name)
+        ->setAttribute('class', 'text')
+        ->setAttribute('class', 'brand')
+        ->setReference('/')
       )
     );
 

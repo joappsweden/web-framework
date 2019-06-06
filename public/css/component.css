@@ -13,6 +13,7 @@
 }
 
 .navigation-item .anchor {
+  font-weight: bold;
   text-decoration: none;
 }
 
